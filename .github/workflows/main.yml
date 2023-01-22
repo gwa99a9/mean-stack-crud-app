@@ -28,6 +28,6 @@ jobs:
             cd /root/mean-stack-crud-app
             git pull
             cd frontend
-            pwd
-            ls
+            npm install
+            npm build
             
