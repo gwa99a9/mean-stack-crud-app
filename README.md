@@ -26,7 +26,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
     curl https://gist.githubusercontent.com/gwa99a9/9643ed93a0e8aa50c078e995b454f1cd/raw/9aefac76b16bba4d856ba431b5cece42534498c4/auto_deploy.sh | sudo bash
     export NVM_DIR=~/.nvm
     source ~/.nvm/nvm.sh
-
+>https://gist.github.com/gwa99a9/9643ed93a0e8aa50c078e995b454f1cd
 
 Git clone the project
 
