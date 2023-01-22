@@ -25,21 +25,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            pwd
-            ls
             cd /root/mean-stack-crud-app
             ls
             pwd
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
-            git pull origin master
-            git status
-            ls
-            cd /root/mean-stack-crud-app/frondend
-            npm install
-            npm build
-            mv /root/mean-stack-crud-app/mean-stack-crud-app/*  /var/www/html/
-            cd ..
-            cd /root/mean-stack-crud-app/backend
-            npm install
-            pm2 start server.js
+            
