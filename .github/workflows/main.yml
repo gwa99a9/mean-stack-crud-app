@@ -30,4 +30,11 @@ jobs:
             source ~/.nvm/nvm.sh
             git pull origin master
             git status
-            npm install --only=prod
+            cd /frondend
+            npm install
+            npm build
+            mv mean-stack-crud-app/*  /var/www/html/
+            cd ..
+            cd /backend
+            npm install
+            pm2 start server.js
