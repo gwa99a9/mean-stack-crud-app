@@ -31,5 +31,7 @@ jobs:
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             npm install
-            npm build
+            npm run build
+            mv dist/mean-stack-crud-app/*  /var/www/html/
+            
             
