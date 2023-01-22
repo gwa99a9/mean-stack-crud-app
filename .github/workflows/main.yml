@@ -26,6 +26,8 @@ jobs:
           port: 22
           script: |
             cd /root/mean-stack-crud-app
-            ls
+            git pull
+            cd frontend
             pwd
+            ls
             
