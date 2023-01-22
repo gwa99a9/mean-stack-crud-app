@@ -25,7 +25,9 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
+            pwd
             cd /root/mean-stack-crud-app
+            pwd
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             git pull origin master
