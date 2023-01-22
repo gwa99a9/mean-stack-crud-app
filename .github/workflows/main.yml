@@ -30,11 +30,11 @@ jobs:
             source ~/.nvm/nvm.sh
             git pull origin master
             git status
-            cd frondend
+            cd /root/mean-stack-crud-app/frondend
             npm install
             npm build
-            mv mean-stack-crud-app/*  /var/www/html/
+            mv /root/mean-stack-crud-app/mean-stack-crud-app/*  /var/www/html/
             cd ..
-            cd backend
+            cd /root/mean-stack-crud-app/backend
             npm install
             pm2 start server.js
