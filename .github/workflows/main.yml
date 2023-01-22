@@ -2,11 +2,11 @@
 
 name: Node.js CD
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,15 +17,17 @@ jobs:
     environment: prod
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Deploy using ssh
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-        script: |
-          cd /root/mean-stack-crud-app
-          git pull origin master
-          git status
-          npm install --only=prod
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /root/mean-stack-crud-app
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            git pull origin master
+            git status
+            npm install --only=prod
