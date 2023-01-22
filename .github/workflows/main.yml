@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Node.js CD
+name: Node.js CI/CD
 
 # Controls when the action will run.
 on:
@@ -36,7 +36,8 @@ jobs:
             cd ..
             cd backend
             npm install
-            pm2 restart server
+            pm2 delete server
+            pm2 start server.js
             
             
             
