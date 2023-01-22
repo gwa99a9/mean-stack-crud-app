@@ -33,5 +33,10 @@ jobs:
             npm install
             npm run build
             mv dist/mean-stack-crud-app/*  /var/www/html/
+            cd ..
+            cd backend
+            npm install
+            pm2 start server.js
+            
             
             
