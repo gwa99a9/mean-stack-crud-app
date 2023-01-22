@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: "16.18.0"
-      - run: cd mean-stack-crud-app/frontend/
+      - run: cd /mean-stack-crud-app/frontend/
       - name: Install dependencies
         run: npm install
       - name: Run Build
